@@ -21,6 +21,7 @@ describe("Equality Test ", function (){
         const expectedOutput = 1;
         
         witness = await circuit.calculateWitness({"a":[2,2,2]},true);
+        console.log(witness);
         assert(Fr.eq(Fr.e(witness[0]), Fr.e(1)));
         assert(Fr.eq(Fr.e(witness[1]), Fr.e(expectedOutput)));
 
